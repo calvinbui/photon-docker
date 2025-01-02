@@ -4,12 +4,14 @@
     "config:recommended"
   ],
 
-  "packageRules": [
+  "customManagers": [
     {
-      "matchPatterns": ["^PHOTON_VERSION$"],
-      "datasource": "github-tags",
-      "packageName": "komoot/photon",
-      "extractVersion": "^v?(?<version>\\d+\\.\\d+\\.\\d+)$"
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": [
+        "ARG PHOTON_VERSION=(?<currentValue>.*?)\n"
+      ],
+      "depNameTemplate": "komoot/photon",
+      "datasourceTemplate": "github-releases"
     }
   ]
 }
