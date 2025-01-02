@@ -1,0 +1,17 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:recommended"
+  ],
+
+  "customManagers": [
+    {
+      "fileMatch": ["^Dockerfile$"],
+      "matchStrings": [
+        "ARG PHOTON_VERSION=(?<currentValue>.*?)\n"
+      ],
+      "depNameTemplate": "komoot/photon",
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}
