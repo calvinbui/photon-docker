@@ -3,4 +3,13 @@
   "extends": [
     "config:recommended"
   ]
+
+  "packageRules": [
+    {
+      "matchPatterns": ["^PHOTON_VERSION$"],
+      "datasource": "github-tags",
+      "packageName": "komoot/photon",
+      "extractVersion": "^v?(?<version>\\d+\\.\\d+\\.\\d+)$"
+    }
+  ]
 }
