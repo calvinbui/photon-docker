@@ -1,4 +1,4 @@
-FROM openjdk:8-jre
+FROM openjdk:11.0.16-jre
 ARG PHOTON_VERSION=0.6.1
 
 # Install pbzip2 for parallel extraction
