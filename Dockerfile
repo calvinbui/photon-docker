@@ -1,5 +1,5 @@
 FROM openjdk:8-jre
-ARG PHOTON_VERSION=0.4.2
+ARG PHOTON_VERSION=0.6.1
 
 # Install pbzip2 for parallel extraction
 RUN apt-get update \
